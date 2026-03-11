@@ -24,7 +24,7 @@ sessions = []
 
 def send_packets(packet):
     new_packet = packet
-    if not (UDP in packet and packet.dport == 12345)
+    if not (UDP in packet and packet.dport == 12345):
         if IP in packet and new_packet.sniffed_on == IFACE8:
             new_packet[IP].src = FAKE_IP
             new_packet[Ether].src = FAKE_MAC
